@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import Post from "./components/Post";
-import SideBar from "./components/SideBar";
+import Card from "./components/Card";
 
 function App() {
   const [post] = useState({
@@ -12,8 +12,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <SideBar post={post} />
-        <Post post={post} totalComments={23} />
+        <Card align="left" title="card">
+          <Post post={post} totalComments={23} />
+        </Card>
       </header>
     </div>
   );
